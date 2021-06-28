@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeedzee</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main" class="container">
+        <div id="intro-screen" class="intro-screen">
+            <h1 id="logo">Yeedzee <img id="logo-img" src="images/yeedologo.jpg"></h1>
+            <button class="start-button" onclick="startGame()">Start Game</button>
+        </div>
+        <div id="game-container" class="game-container hide">
+            <h1 id="logo">Yeedzee <img id="logo-img" src="images/yeedologo.jpg"></h1>
+            <p id="score" class="score">Score:<span id="score-points">0</span></p>
+                <div id="dice-container" class="dice-container">
+                    <img id="die1" class="dice img1" src="images/cat_paw.png">
+                    <img id="die2" class="dice img2" src="images/cat_paw.png">
+                    <img id="die3" class="dice img3" src="images/cat_paw.png">
+                    <img id="die4" class="dice img4" src="images/cat_paw.png">
+                    <img id="die5" class="dice img5" src="images/cat_paw.png">
+                </div>
+                <button id="roll-button" class="roll-button" onclick="rollDice()">ROLL!</button>
+                <p id="turn" class="turn">Rolls Left: <span id="rolls">30 </span>/ 30</p>
+        </div>
+        <div id="game-over" class="game-over hide">
+            <h1 id="logo">Yeedzee <img id="logo-img" src="images/yeedologo.jpg"></h1>
+            <p class="endgame"> Your Final Score is: <span id="final-score">0</span> !</p>
+            <p class="endgame">Refresh to Play Again!</p>
+            <button class="start-button leader-button" onclick="leaderBoard()">Add Score to Leaderboard</button>
+        </div>
+            <a id="rules-link" class="rules-link" href="#scoring-container">Game Rules</a>
+            <a class="down-arrow" href="#scoring-container">&#9660;</a>
+
+        <div id="scoring-container" class="scoring-container">
+            <div class="rules">
+                <h2>How to Play: </h2>
+                <p>• 30 rolls per game</p>
+                <p>• Each roll is awarded points based on score table below</p>
+                <p>• Try to beat the high score!</p>
+            </div>
+            <div class="scores sally">              
+                <div class="score-name sally">Triple Sal-Cow:  3 or more <img src="images/cat3.jpg" alt=""></div>
+                <div class="point-value sally">25 points</div>
+            </div>
+            <div class="scores jonah">              
+                <div class="score-name jonah">Cute Boot Riot:  3 or more <img src="images/cat2.jpg" alt=""></div>
+                <div class="point-value jonah">25 points</div>
+            </div>
+            <div class="scores yeedo">              
+                <div class="score-name yeedo">Wisdom Screbs:  3 or more <img src="images/cat5.jpg" alt=""></div>
+                <div class="point-value yeedo">25 points</div>
+            </div>
+            <div class="scores bing">              
+                <div class="score-name bing">Good Boy That Does Bad Things:  3 or more <img src="images/cat4.jpg" alt=""></div>
+                <div class="point-value bing">25 points</div>
+            </div>
+            <div class="scores cookie">              
+                <div class="score-name cookie">Stiletto Dance:  3 or more <img src="images/cat6.jpg" alt=""></div>
+                <div class="point-value cookie">25 points</div>
+            </div>
+            <div class="scores mau">              
+                <div class="score-name mau">Kool Mau Dee:  3 or more <img src="images/cat1.jpg" alt=""></div>
+                <div class="point-value mau">25 points</div>
+            </div>
+            <div class="scores cookie-bing">              
+                <div class="score-name cookie-bing">Two Brothers, Two Friends:  All Dice <img src="images/cat4.jpg" alt=""> or <img src="images/cat6.jpg" alt=""></div>
+                <div class="point-value cookie-bing">100 points</div>
+            </div>
+            <div class="scores jonah-sal">              
+                <div class="score-name jonah-sal">Bear Attack: All Dice <img src="images/cat2.jpg" alt=""> or <img src="images/cat3.jpg" alt=""></div>
+                <div class="point-value jonah-sal">100 points</div>
+            </div>
+            <div class="scores yeedzee">              
+                <div class="score-name yeedzee">Yeedzee!: All 5 Dice are <img src="images/cat5.jpg" alt=""></div>
+                <div class="point-value yeedzee">300 points</div>
+            </div>
+        </div>
+    </div>
+    <a id="back-link" class="back-link" href="#main"> • Back to Game • </a>
+    <footer>
+        &#169; 2021 Nick Connolly • Built with help from ☕
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
