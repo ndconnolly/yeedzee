@@ -181,6 +181,8 @@ form {
     background-color: #810000;
     color: #EEEBDD;
     border-radius: 5%;
+    cursor: pointer;
+    z-index: 99;
 }
 
 .scoring-container {
