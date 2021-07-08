@@ -358,7 +358,7 @@ footer {
     border-radius: 5%;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1024px) {
     .container {
         flex-direction: column;
         position: relative;
@@ -367,7 +367,7 @@ footer {
     #logo {
         font-size: 3.2rem;
         padding-left: 1%;
-        padding-top: 5%;
+        margin-top: 18%;
     }
     #logo-img {
         width: 5.5rem;
@@ -380,13 +380,19 @@ footer {
         position: relative;
         height: 95vh;
     }
-    .start-button, .roll-button {
-        width: 35%;
+    .start-button {
+        width: 45%;
         height: 3rem;
         font-size: 1rem;
+        margin-top: 50;
+        margin-bottom: 10;
+    }
+    .roll-button {
+        width: 40%;
+        height: 3rem;
     }
     .hs-button {
-        width: 35%;
+        width: 45%;
         height: 3rem;
         font-size: .8rem;
     }
@@ -406,7 +412,7 @@ footer {
         font-size: 1.1rem;
     }
     .scores img {
-        width: 1.9rem;
+        width: 2.2rem;
     }
     .highlight {
         display: flex;
@@ -429,12 +435,14 @@ footer {
     }
     .score-name {
         display: flex;
-        font-size: .55rem;
+        font-size: .65rem;
+        font-weight: 600;
     }
     
     .point-value {
         display: flex;
-        font-size: .55rem;
+        font-size: .65rem;
+        font-weight: 700;
     }
     .scores {
         display: flex;
@@ -444,11 +452,12 @@ footer {
         width: 100%;
     }
     .leader-button {
-        width: 35%;
+        width: 45%;
         font-size: .85rem;
+        margin-top: 2%;
     }
     #username {
-        width: 35%;
+        width: 45%;
         font-size: .7rem;
         height: 1.5rem;
         padding: 0;
@@ -536,13 +545,13 @@ footer {
 @media screen and (max-height: 720px) {
     .rules-link {
         font-size: .65rem;
-        bottom: 35;
+        bottom: 25;
         padding: 0;
     }
     .down-arrow {
         align-self: center;
         opacity: .5;
-        bottom: 35;
+        bottom: 25;
         padding: 0;
     }
     .leader-button, .hs-button {
