@@ -9,7 +9,6 @@
 
 -- Animations --
 
- - Rolling Dice
  <!-- - "Highlight" Class when scoring -->
 
 
@@ -24,4 +23,4 @@
 
 -- Long Term --
 
- - Add High Score list
+ <!-- - Add High Score list -->

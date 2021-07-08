@@ -4,6 +4,16 @@ let totalScore = 0;
 
 let rollsCount = document.getElementById("rolls").innerHTML=parseInt(document.getElementById("rolls").innerHTML);
 
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+
+const topScores = 10;
+
+username.addEventListener("keyup", () => {
+    saveScoreBtn.disabled = !username.value;
+});
+
 function gameOver() {
     document.getElementById("game-over").classList.remove("hide");
     document.getElementById("game-container").classList.add("hide");
@@ -109,3 +119,21 @@ const scoreMau = (currentValue) => currentValue === 1;
     }
 }
 
+saveHighScore = e => {
+    e.preventDefault();
+
+    const mostRecentScore = localStorage.getItem("mostRecentScore");
+
+    const newScore = {
+        score: mostRecentScore,
+        name: username.value
+    };
+
+    highScores.push(newScore);
+    highScores.sort( (a,b) => b.score - a.score);
+
+    highScores.splice(10);
+
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    window.location.assign("./index.html");
+}

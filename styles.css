@@ -11,14 +11,14 @@ body {
 body::after {
     content: "";
     background: url("./images/pawprint.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     opacity: 0.03;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     z-index: -1;   
 }
 
@@ -37,7 +37,6 @@ body::after {
 }
 
 #logo {
-    /* border: 2px solid green; */
     display: flex;
     position: relative;
     font-weight: 800;
@@ -61,9 +60,8 @@ body::after {
 .start-button {
     display: flex;
     position: relative;
+    margin-bottom: 2%;
     justify-content: center;
-    top: 7%;
-    bottom: 50%;
     align-self: center;
     width: 25%;
     align-items: center;
@@ -75,6 +73,12 @@ body::after {
     background-color: #810000;
     color: #EEEBDD;
     border-radius: 5%;
+}
+
+.leader-button {
+    width: 25%;
+    font-size: 1.1rem;
+    margin-bottom: 0%;
 }
 
 .score {
@@ -99,6 +103,29 @@ body::after {
     font-size: 2rem;
     font-weight: 400;
 }
+
+form {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+#username {
+    font-family: 'Spartan', sans-serif;
+    font-size: .9rem;
+    color: #CE1212;
+    padding: 1%;
+    border: 3px double #810000;
+    border-radius: 3%;
+    background: none;
+    width: 25%;
+    align-self: center;
+    margin-bottom: 2%;
+}
+
 
 #score-points {
     padding-left: 10px;
@@ -125,7 +152,6 @@ body::after {
 }
 
 .dice {
-    /* border: 2px solid blue; */
     display: block;
     position: relative;
     width: 15%;
@@ -259,6 +285,77 @@ footer {
     display: none;
 }
 
+.leaderboard {
+    display: inline;
+    width: 100%;
+    height: 90vh;
+}
+
+.scores-title {
+    font-weight: 800;
+    text-align: center;
+    color: #810000;
+    font-size: 3.5rem;
+    margin-top: 2rem;
+}
+
+.scores-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.hs-name {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: #1B1717;
+    padding-left: 25%;
+}
+
+.hs-score {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #CE1212;
+    font-weight: 800;
+    padding-right: 25%;
+}
+
+.home-link {
+    display: flex;
+    position: relative;
+    padding-top: 1%;
+    padding-bottom: 10;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #810000;
+    text-decoration: none;
+}
+
+.hs-button {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 25%;
+    height: 4rem;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    background: none;
+    color: #810000;
+    border: 4px double #810000;
+    border-radius: 5%;
+}
+
 @media screen and (max-width: 770px) {
     .container {
         flex-direction: column;
@@ -268,6 +365,7 @@ footer {
     #logo {
         font-size: 3.2rem;
         padding-left: 1%;
+        padding-top: 5%;
     }
     #logo-img {
         width: 5.5rem;
@@ -282,13 +380,18 @@ footer {
     }
     .start-button, .roll-button {
         width: 35%;
-        top: 5%;
         height: 3rem;
         font-size: 1rem;
     }
+    .hs-button {
+        width: 35%;
+        height: 3rem;
+        font-size: .8rem;
+    }
     .turn {
        text-align: center;
-       padding-top: 25%;
+       position: relative;
+       padding-top: 15%;
     }
     .scoring-container {
         width: 100%;
@@ -339,8 +442,14 @@ footer {
         width: 100%;
     }
     .leader-button {
-        width: 65%;
-        font-size: .9rem;
+        width: 35%;
+        font-size: .85rem;
+    }
+    #username {
+        width: 35%;
+        font-size: .7rem;
+        height: 1.5rem;
+        padding: 0;
     }
     .rules-link {
         display: flex;
@@ -357,7 +466,7 @@ footer {
     .down-arrow {
         display: flex;
         position: relative;
-        bottom: 95;
+        bottom: 100;
         justify-content: center;
         align-self: center;
         font-size: 2rem;
@@ -377,26 +486,41 @@ footer {
         color: #810000;
         text-decoration: none;
     }
+    .scores-title {
+        font-size: 2.3rem;
+        margin-top: 3rem;
+    }
+    
+    .scores-list {
+        font-size: 1rem;
+    }
+    
+    .hs-name {
+        padding-left: 15%;
+    }
+    
+    .hs-score {
+        padding-right: 15%;
+    }
 }
 
-@media screen and (max-width: 420px) {
+
+
+@media screen and (max-width: 500px) {
     #logo {
         font-size: 2.8rem;
     }
     .turn {
         text-align: center;
-        margin-top: 0;
-        font-size: .9rem;
+        font-size: .8rem;
     }
-     .intro-screen, .game-container, .game-over {
+    .intro-screen, .game-container, .game-over {
         top: 35;
-     }
+    }
      .rules-link {
-        bottom: 45;
-        font-size: .7rem;
+        font-size: .75rem;
     }
     .down-arrow {
-        bottom: 45;
         align-self: center;
         opacity: .5;
     }
@@ -404,5 +528,25 @@ footer {
         height: 2.5rem;
         font-size: 1rem;
         bottom: 0;
+    }
+}
+
+@media screen and (max-height: 720px) {
+    .rules-link {
+        font-size: .65rem;
+        bottom: 35;
+        padding: 0;
+    }
+    .down-arrow {
+        align-self: center;
+        opacity: .5;
+        bottom: 35;
+        padding: 0;
+    }
+    .leader-button, .hs-button {
+        height: 2.2rem;
+        top: 0;
+        bottom: 0;
+        font-size: .65rem;
     }
 }

@@ -14,9 +14,10 @@
         <div id="intro-screen" class="intro-screen">
             <h1 id="logo">Yeedzee <img id="logo-img" src="images/yeedologo.jpg"></h1>
             <button class="start-button" onclick="startGame()">Start Game</button>
+            <button class="hs-button" onclick="location.href='leaderboard.html';">View Leaderboard</button>
         </div>
         <div id="game-container" class="game-container hide">
-            <h1 id="logo">Yeedzee <img id="logo-img" src="images/yeedologo.jpg"></h1>
+            <h1 id="logo" class="logo">Yeedzee <img id="logo-img" src="images/yeedologo.jpg"></h1>
             <p id="score" class="score">Score:<span id="score-points">0</span></p>
                 <div id="dice-container" class="dice-container">
                     <img id="die1" class="dice img1" src="images/cat_paw.png">
@@ -32,7 +33,11 @@
             <h1 id="logo">Yeedzee <img id="logo-img" src="images/yeedologo.jpg"></h1>
             <p class="endgame"> Your Final Score is: <span id="final-score">0</span> !</p>
             <p class="endgame">Refresh to Play Again!</p>
-            <button class="start-button leader-button" onclick="leaderBoard()">Add Score to Leaderboard</button>
+            <form action="">
+                <input type="text" name="username" id="username" placeholder="enter your name"/>
+                <button class="start-button leader-button" type="submit" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Add Score to Leaderboard</button>
+            </form>
+            <button class="hs-button" onclick="location.href='leaderboard.html';">View Leaderboard</button>
         </div>
             <a id="rules-link" class="rules-link" href="#scoring-container">Game Rules</a>
             <a class="down-arrow" href="#scoring-container">&#9660;</a>
